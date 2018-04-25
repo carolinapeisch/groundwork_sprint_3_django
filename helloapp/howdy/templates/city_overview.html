@@ -1,0 +1,134 @@
+{% load staticfiles %}
+{% load static %}
+
+
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Groundwork</title>
+		<meta charset="utf-8" />
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
+		<!--&lt;!&ndash;[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]&ndash;&gt;-->
+        <link rel="stylesheet" type="text/css" href="{% static '/howdy/style.css' %}" />
+        <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
+
+	</head>
+	<body>
+
+
+<h2 style="background-color:#201D40; color:#FFFBCE">Groundwork</h2>
+
+
+			<div id="wrapper">
+					<header id="header">
+						<div class="inner">
+
+
+							<!-- Nav -->
+								<nav>
+									<span class="symbol"></span><span class="title"></span>
+								</a>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+				<!--&lt;!&ndash; Menu &ndash;&gt;-->
+					<!--<nav id="menu">-->
+						<!--<h2>Menu</h2>-->
+						<!--<ul>-->
+							<!--<li><a href="index.html">Home</a></li>-->
+							<!--<li><a href="springfield_overview.html">Springfield Overview</a></li>-->
+							<!--<li><a href="springfield_roads.html">Springfield Roads</a></li>-->
+						<!--</ul>-->
+					<!--</nav>-->
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+                            <div id = "content">
+							<h1>{CITY NAME}</h1>
+                                <h3> Groundwork Health Score</h3>
+								<p>
+                                    {CITY HEALTH SCORE - PERCENTAGE CIRCLE }
+                                </p>
+                                <p>
+                                <a href="https://www.springfield-ma.gov/finance/index.php?id=151">View {CITY NAME} 2017 CAFR</a>
+                                <br>
+                                <a href="http://www.springfield-ma.gov/finance/index.php?id=omb">View {CITY NAME} 2017 Budget</a>
+                            </p>
+                                <br>
+                            <!--<p style="text-decoration: underline;">View Springfield, MA 2017 CAFR</p>-->
+
+                        <!--<div class="center-div">-->
+                            <!--<button type="button" style="position: center;">View Springfield, MA 2017 CAFR</button>-->
+                        <!--</div>-->
+                            <!--<br>-->
+
+
+							<table style="width:100%; background-color: white" >
+							  <tr>
+								<th style="font-size: 30px; color:red"> {CITY STATUS} </td>
+								<th style="font-size: 30px; color:red"> {CITY EXPECTED FUNDING } </td>
+								<th style="font-size: 30px; color:red"> {CITY STATUS} </td>
+							  </tr>
+                                <tr>
+								<td>Overall City Status</td>
+								<td>Expected Funding</td>
+								<td>Actual Funding </td>
+							  </tr>
+							</table>
+                                <br>
+							<!--<span class="image main"><img src="images/donut-pie-chart.png" width="100" height="100"/></span>-->
+							<table style="width:100%; background-color: white" >
+							  <tr>
+								<th><img src="{% static "howdy/images/trans_road.png" %}" width="100" height="100" align="center"</th>
+								<th><img src="{% static "howdy/images/trans_sewage.png" %}" width="100" height="100" align="center"</th>
+								<th><img src="{% static "howdy/images/trans_airport.png" %}" width="100" height="100" align="center"</th>
+								<th><img src="{% static "howdy/images/trans_building.png" %}" width="100" height="100" align="center"</th>
+							  </tr>
+							  <tr>
+								<td>{ASSET STATUS}</td>
+								<td>{ASSET STATUS}</td>
+								<td>{ASSET STATUS}</td>
+								<td>{ASSET STATUS}</td>
+							  </tr>
+							  <tr>
+								<td>
+									{ROAD SCORE - PERCENTAGE CIRCLE }
+                                </td>
+								<td>
+									{SEWAGE SCORE - PERCENTAGE CIRCLE }
+                                </td>
+								<td>
+									{AIRPORTS SCORE - PERCENTAGE CIRCLE }
+                                </td>
+								<td>
+									{BUILDING SCORE - PERCENTAGE CIRCLE }
+                                </td>
+							  </tr>
+							  </tr>
+							</table>
+                                </div>
+						</div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

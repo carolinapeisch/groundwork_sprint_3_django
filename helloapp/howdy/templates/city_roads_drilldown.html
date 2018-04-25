@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Groundwork</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+        <link rel="stylesheet" type="text/css" href="{% static '/howdy/style.css' %}" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+	</head>
+	<body>
+    <h2 style="background-color:#201D40; color:#FFFBCE">Groundwork</h2>
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="inner">
+								<nav>
+									<ul>
+										<li><a href="#menu">Menu</a></li>
+									</ul>
+								</nav>
+
+						</div>
+					</header>
+
+
+				<!-- Menu -->
+					<nav id="menu">
+						<h2>Menu</h2>
+						<ul>
+							<li><a href="index.html">Home</a></li>
+							<li><a href="springfield_overview.html">Springfield Overview</a></li>
+							<li><a href="springfield_roads.html">Springfield Roads</a></li>
+						</ul>
+					</nav>
+
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+							<h1>Springfield, MA</h1>
+                            <ul id="tabs">
+								<!--<a style="background-color:#201D40"> <img src="images/trans_road.png" width="100" height="100" align="center">-->
+								<a id = "selected_tab"> <img src="{% static "howdy/images/trans_road.png" %}" width="100" height="100" align="center">
+								<a> <img src="{% static "howdy/images/trans_sewage.png" %}" width="100" height="100" align="center">
+								<a> <img src="{% static "howdy/images/trans_airport.png" %}" width="110" height="100" align="center">
+								<a> <img src="{% static "howdy/images/trans_building.png" %}" width="100" height="100" align="center">
+                                </ul>
+
+                            <div id="content">
+                                <div id="tab1">
+                                    <p style = 'text-align:left; font-size: 40px'> Roads </p>
+                                    <h3> Groundwork Road Health Score</h3>
+								<p>
+                                    {ROAD SCORE - PERCENTAGE CIRCLE }
+                                </p>
+
+                            <table style="width:100%" >
+							  <tr>
+                                  <td style="background-color:#201D40; color:#FFFBCE"> <b>Geometry Fundamentals </b> </td>
+                                  <td style="background-color: #201D40"></td>
+                                  <td style="background-color: #201D40"></td>
+							  </tr>
+                                <tr>
+								<td style="font-size: 30px; color:#1daeec"> <b> {INTEGER Total Square Footage of All Streets} </b> </td>
+								<td style="font-size: 30px; color:#1daeec"> <b> {INTEGER Square Footage of CONCRETE Streets} </b> </td>
+								<td style="font-size: 30px; color:#1daeec"> <b> {INTEGER Square Footage of ASPHALT Streets} </b> </td>
+							  </tr>
+							  <tr>
+								<td> Total Square Footage of All Streets </td>
+								<td> Square Footage of Concrete Streets</td>
+								<td> Square Footage of Asphalt Streets</td>
+							  </tr>
+                                <tr>
+								<td> </td>
+								<td> </td>
+								<td> </td>
+							  </tr>
+                                <tr>
+                                  <td style="background-color:#201D40; color:#FFFBCE"> <b> Financial Fundamentals</b> </td>
+                                  <td style="background-color: #201D40"></td>
+                                  <td style="background-color: #201D40"></td>
+							  </tr>
+                                <tr>
+								<td style="font-size: 30px; color:#1daeec; "> <b> {CITY EXPECTED ANNUAL COST} </b></td>
+                                    <td style="font-size: 30px; color:#1daeec;"> <b> {CITY ACTUAL ANNUAL SPENDING}</b> </td>
+								<td style="font-size: 30px; color:red"> <b> {CITY COST DIFFERENTIAL} </b> </td
+
+							  </tr>
+							  <tr>
+								<td>Expected Annual Cost</td>
+                                  <td> Actual Annual Spending </td>
+								<td> Cost Differential <br>
+                                </td></tr>
+                                <tr>
+								<td></td>
+								<td>
+                                    </td>
+								<td></td>
+                                </tr>
+                                                                <tr>
+								<td></td>
+								<td>
+                                    <button type="button" style="position: center;">Export Table Data</button></td>
+								<td></td>
+                                </tr>
+							</table>
+								</div>
+                            </div>
+					</div>
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
