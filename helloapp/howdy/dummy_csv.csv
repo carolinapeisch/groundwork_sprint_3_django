@@ -1,0 +1,5 @@
+﻿city_name,city_status,city_expected_funding,city_status_current_funding,road_asset_status,sewage_asset_status,airplane_asset_status,building_asset_status,city_total_sq_footage_streets,city_total_sq_footage_concrete_streets,city_total_sq_footage_asphalt_streets,city_roads_expected_annual_cost,city_roads_actual_annual_spending,city_roads_cost_differential
+Boston,underfunded,"10,000,000",403294812,underfunded,overfunded,underfunded,underfunded,100,10,90,100000,24324,75676
+Cambridge,overfunded,2341234,32345234,underfunded,overfunded,underfunded,underfunded,120,20,100,100000,2344,97656
+Milton,,,,underfunded,overfunded,underfunded,underfunded,200,90,110,100000,100,99900
+Springfield,,,,underfunded,overfunded,underfunded,underfunded,400,90,310,100000,89789,10211
