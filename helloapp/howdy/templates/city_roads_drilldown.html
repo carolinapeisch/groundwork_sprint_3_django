@@ -12,6 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
         <link rel="stylesheet" type="text/css" href="{% static '/howdy/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static '/howdy/circle.css' %}" />
         <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 
 	</head>
@@ -60,9 +61,15 @@
                                 <div id="tab1">
                                     <p style = 'text-align:left; font-size: 40px'> Roads </p>
                                     <h3> Groundwork Road Health Score</h3>
-								<p>
-                                    {ROAD SCORE - PERCENTAGE CIRCLE }
-                                </p>
+										<div class="center-div">
+										<div class="c100 p12 small">
+									<span>12%</span>
+									<div class="slice">
+										<div class="bar"></div>
+										<div class="fill"></div>
+									</div>
+								</div>
+										</div>
 
                             <table style="width:100%" >
 							  <tr>

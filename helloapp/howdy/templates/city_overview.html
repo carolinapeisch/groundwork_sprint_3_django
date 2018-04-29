@@ -15,6 +15,7 @@
 		<!--<meta name="viewport" content="width=device-width, initial-scale=1" />-->
 		<!--&lt;!&ndash;[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]&ndash;&gt;-->
         <link rel="stylesheet" type="text/css" href="{% static '/howdy/style.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static '/howdy/circle.css' %}" />
         <!--<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">-->
 
 	</head>
@@ -58,15 +59,32 @@
                             <div id = "content">
 							<h1>{CITY NAME}</h1>
                                 <h3> Groundwork Health Score</h3>
-								<p>
-                                    {CITY HEALTH SCORE - PERCENTAGE CIRCLE }
-                                </p>
-                                <p>
-                                <a href="https://www.springfield-ma.gov/finance/index.php?id=151">View {CITY NAME} 2017 CAFR</a>
-                                <br>
-                                <a href="http://www.springfield-ma.gov/finance/index.php?id=omb">View {CITY NAME} 2017 Budget</a>
-                            </p>
-                                <br>
+
+								<table style="width:100%; background-color: white" >
+								<tr>
+									<td>
+										<div class="center-div">
+										<div class="c100 p12 small">
+									<span>12%</span>
+									<div class="slice">
+										<div class="bar"></div>
+										<div class="fill"></div>
+									</div>
+								</div>
+										</div>
+									</td>
+							  </tr>
+                                <tr>
+									<td>
+										<a href="http://www.springfield-ma.gov/finance/index.php?id=omb">View {CITY NAME} 2017 Budget</a>
+									</td>
+							  </tr>
+								<tr>
+									<td>
+										<a href="http://www.springfield-ma.gov/finance/index.php?id=omb">View {CITY NAME} 2017 Budget</a>
+									</td>
+								</tr>
+							</table>
                             <!--<p style="text-decoration: underline;">View Springfield, MA 2017 CAFR</p>-->
 
                         <!--<div class="center-div">-->
@@ -104,17 +122,49 @@
 							  </tr>
 							  <tr>
 								<td>
-									{ROAD SCORE - PERCENTAGE CIRCLE }
+									<div class="center-div">
+										<div class="c100 p12 small">
+									<span>12%</span>
+									<div class="slice">
+										<div class="bar"></div>
+										<div class="fill"></div>
+									</div>
+								</div>
+										</div>
                                 </td>
 								<td>
-									{SEWAGE SCORE - PERCENTAGE CIRCLE }
-                                </td>
+									<div class="center-div">
+										<div class="c100 p12 small">
+									<span>12%</span>
+									<div class="slice">
+										<div class="bar"></div>
+										<div class="fill"></div>
+									</div>
+								</div>
+										</div>
+								</td>
 								<td>
-									{AIRPORTS SCORE - PERCENTAGE CIRCLE }
-                                </td>
+									<div class="center-div">
+										<div class="c100 p12 small">
+									<span>12%</span>
+									<div class="slice">
+										<div class="bar"></div>
+										<div class="fill"></div>
+									</div>
+								</div>
+										</div>
+								</td>
 								<td>
-									{BUILDING SCORE - PERCENTAGE CIRCLE }
-                                </td>
+									<div class="center-div">
+										<div class="c100 p12 small">
+									<span>12%</span>
+									<div class="slice">
+										<div class="bar"></div>
+										<div class="fill"></div>
+									</div>
+								</div>
+										</div>
+								</td>
 							  </tr>
 							  </tr>
 							</table>
