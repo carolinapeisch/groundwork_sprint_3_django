@@ -30,7 +30,7 @@ class CityOverview(View):
     template_name = "city_overview.html"
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name, {'message': "OH HEY THERE"})
+        return render(request, self.template_name, {'city_name': kwargs.get('city_name')})
 
 
 
