@@ -61,9 +61,14 @@
                                 <!--<img class="centeredImage" src="images/groundwork.png" width="200" height="40">-->
 								<p style="color:#FFFBCE">We’re using data science to expose and evaluate risk in infrastructure finance.</p>
 							</header>
-
-                            <div class="topnav">
-								<input type="text" font color="#FFFBCE" placeholder="THIS NEEDS TO BE A FORM"><a href="springfield_overview.html"> <font color="#FFFBCE">Go</font></a>
+							<div class="topnav">
+								<form action="" method="post">
+								    {% csrf_token %}
+								    {{ form }}
+								    <input type="submit" value="Submit" />
+								</form>
+								<!-- <input id="city_name" type="text" name="city_name" maxlength="100" value="Enter a city name" required /> -->
+								<!-- <input type="text" font color="#FFFBCE" placeholder="THIS NEEDS TO BE A FORM"><a href="springfield_overview.html"> <font color="#FFFBCE">Go</font></a> -->
 
                                 <!--<form action="/city_overview/" method="post">-->
                                     <!--{% csrf_token %}-->
@@ -71,7 +76,7 @@
                                     <!--<input type="submit" value="GO" />-->
                                 <!--</form>-->
 
-                            </div>
+							</div>
 						</div>
 					</div>
 			</div>
