@@ -20,7 +20,7 @@ class HomePageView(View):
         if form.is_valid():
             name = form.cleaned_data['city_input'].lower().title()
             return HttpResponseRedirect('/city_overview/{}'.format(name))
-        return render(request, self.template_name, {'form': form, 'message': "OH HEY THERE"})
+        return render(request, self.template_name, {'form': form})
 
 class AboutPageView(TemplateView):
     template_name = "about.html"
@@ -30,7 +30,7 @@ class CityOverview(View):
     template_name = "city_overview.html"
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name)
+        return render(request, self.template_name, {'message': "OH HEY THERE"})
 
 
 
