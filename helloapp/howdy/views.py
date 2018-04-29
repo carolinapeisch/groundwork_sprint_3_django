@@ -34,7 +34,7 @@ class CityOverview(View):
     city_record = df.loc[df['city_name']==].to_dict(orient='records')
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name,response_data)
+        return render(request, self.template_name, {'city_name': kwargs.get('city_name')})
 
 
 
