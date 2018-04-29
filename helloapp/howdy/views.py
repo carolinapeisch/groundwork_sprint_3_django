@@ -1,67 +1,37 @@
 from django.shortcuts import render
+from django.views import View
 from django.views.generic import TemplateView
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 
 from .forms import NameForm
 
-class HomePageView(TemplateView):
+class HomePageView(View):
+    form_class = NameForm
+    initial = {'city_input': ''}
+    template_name = 'index.html'
 
     def get(self, request, **kwargs):
-        return render(request, 'index.html', context=None)
+        form = self.form_class(initial=self.initial)
+        return render(request, self.template_name, {'form': form})
 
-def getCityName(request):
-    # if this is a POST request we need to process the form data
-    if request.method == 'POST':
-        # create a form instance and populate it with data from the request:
-        form = NameForm(request.POST)
-        # check whether it's valid:
+    def post(self, request, *args, **kwargs):
+        form = self.form_class(request.POST)
         if form.is_valid():
-            # process the data in form.cleaned_data as required
-            # ...
-            # redirect to a new URL:
-            name = form.cleaned_data['city_name']
+            name = form.cleaned_data['city_input'].lower().title()
             return HttpResponseRedirect('/city_overview/{}'.format(name))
-
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = NameForm()
-
-    return render(request, 'name.html', {'form': form})
-
-def lookup_city(request):
-    # If this is a POST request then process the Form data
-    if request.method == 'POST':
-
-        # Create a form instance and populate it with data from the request (binding):
-        form = NameForm(request.POST)
-
-        # Check if the form is valid:
-        if form.is_valid():
-            # redirect to a new URL:
-            return HttpResponseRedirect(reverse('city-overview/{}'.format(form.cleaned_data['city_input'])) )
-
-    # If this is a GET (or any other method) create the default form.
-    else:
-        form = NameForm(initial={'city_input': 'Enter a city name.',})
-
-    return render(request, 'index.html', {'form': form})
-
-
-
-
-
-
-
-
-
+        return render(request, self.template_name, {'form': form, 'message': "OH HEY THERE"})
 
 class AboutPageView(TemplateView):
     template_name = "about.html"
 
 
-class CityOverview(TemplateView):
+class CityOverview(View):
     template_name = "city_overview.html"
+
+    def get(self, request, **kwargs):
+        return render(request, self.template_name)
+
 
 
 class CityRoads(TemplateView):

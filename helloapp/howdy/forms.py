@@ -2,6 +2,7 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
+import os
 import csv
 
 class NameForm(forms.Form):
@@ -10,13 +11,14 @@ class NameForm(forms.Form):
 
     def clean_city_input(self):
         data = self.cleaned_data['city_input']
-        name = data.lower().split(',')[0] # lower case and remove any reference to state
+        name = data.split(',')[0] # lower case and remove any reference to state
         # check if the city is in the csv file
         valid_city = False
-        with open("dummy_csv.csv", "rb") as f:
+        fname = os.path.join(os.path.dirname(__file__), 'dummy_csv.csv')
+        with open(fname, "r") as f:
             csvreader = csv.reader(f, delimiter=",")
             for row in csvreader:
-                if name in row[0]:
+                if name.lower() in row[0].lower():
                     valid_city = True
                     break
         if not valid_city:
