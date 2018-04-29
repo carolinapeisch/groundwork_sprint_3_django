@@ -3,7 +3,8 @@ from django.views import View
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import NameForm
-import pandas
+import pandas as pd
+import os
 
 class HomePageView(View):
     form_class = NameForm
@@ -18,7 +19,7 @@ class HomePageView(View):
         form = self.form_class(request.POST)
         if form.is_valid():
             name = form.cleaned_data['city_input'].lower().title()
-            return HttpResponseRedirect('/city_overview/'.format(name))
+            return HttpResponseRedirect('/city_overview/{}'.format(name))
         return render(request, self.template_name, {'form': form})
 
 class AboutPageView(View):
@@ -30,11 +31,13 @@ class AboutPageView(View):
 
 class CityOverview(View):
     template_name = "city_overview.html"
-    city_df = pd.read_csv('dummy_csv.csv',header=0)
-    city_record = df.loc[df['city_name']==].to_dict(orient='records')
 
     def get(self, request, **kwargs):
-        return render(request, self.template_name, {'city_name': kwargs.get('city_name')})
+        fname = os.path.join(os.path.dirname(__file__), 'dummy_csv.csv')
+        city_df = pd.read_csv(fname,header=0)
+        city_name = kwargs.get('city_name')
+        response_data = city_df.loc[city_df['city_name']==city_name].to_dict(orient='records')[0]
+        return render(request, self.template_name, response_data)
 
 
 
