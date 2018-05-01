@@ -1,8 +1,5 @@
-﻿city_name,city_status,city _health_score,city_expected_funding,city_status_current_funding,road_asset_status,road_score,sewage_asset_status,sewage_score,airport_asset_status,airport_score,building_asset_status,building_score,city_total_sq_footage_streets,city_total_sq_footage_concrete_streets,city_total_sq_footage_asphalt_streets,city_roads_expected_annual_cost,city_roads_actual_annual_spending,city_roads_cost_differential
+﻿city_name,city_status,city_health_score,city_expected_funding,city_status_current_funding,road_asset_status,road_score,sewage_asset_status,sewage_score,airport_asset_status,airport_score,building_asset_status,building_score,city_total_sq_footage_streets,city_total_sq_footage_concrete_streets,city_total_sq_footage_asphalt_streets,city_roads_expected_annual_cost,city_roads_actual_annual_spending,city_roads_cost_differential
 Boston,underfunded,45,"10,000,000",403294812,underfunded,20,overfunded,30,underfunded,40,underfunded,50,100,10,90,100000,24324,75676
 Cambridge,overfunded,67,2341234,32345234,underfunded,20,overfunded,30,underfunded,40,underfunded,50,120,20,100,100000,2344,97656
 Milton,underfunded,34,81547737,65890096,underfunded,20,overfunded,30,underfunded,40,underfunded,50,200,90,110,100000,100,99900
 Springfield,underfunded,76,110456343,89009834,underfunded,20,overfunded,30,underfunded,40,underfunded,50,400,90,310,100000,89789,10211
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
