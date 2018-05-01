@@ -39,8 +39,8 @@
 						<h2>Menu</h2>
 						<ul>
 							<li><a href="index.html">Home</a></li>
-							<li><a href="springfield_overview.html">Springfield Overview</a></li>
-							<li><a href="springfield_roads.html">Springfield Roads</a></li>
+							<li><a href="springfield_overview.html">{{city_name}} Overview</a></li>
+							<li><a href="springfield_roads.html">{{city_name}} Roads</a></li>
 						</ul>
 					</nav>
 
@@ -48,7 +48,7 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Springfield, MA</h1>
+							<h1>{{city_name}}, MA</h1>
                             <ul id="tabs">
 								<!--<a style="background-color:#201D40"> <img src="images/trans_road.png" width="100" height="100" align="center">-->
 								<a id = "selected_tab"> <img src="{% static "howdy/images/trans_road.png" %}" width="100" height="100" align="center">
@@ -63,7 +63,7 @@
                                     <h3> Groundwork Road Health Score</h3>
 										<div class="center-div">
 										<div class="c100 p12 small">
-									<span>12%</span>
+									<span>{{city_health_score}}</span>
 									<div class="slice">
 										<div class="bar"></div>
 										<div class="fill"></div>
@@ -78,9 +78,9 @@
                                   <td style="background-color: #201D40"></td>
 							  </tr>
                                 <tr>
-								<td style="font-size: 30px; color:#1daeec"> <b> {INTEGER Total Square Footage of All Streets} </b> </td>
-								<td style="font-size: 30px; color:#1daeec"> <b> {INTEGER Square Footage of CONCRETE Streets} </b> </td>
-								<td style="font-size: 30px; color:#1daeec"> <b> {INTEGER Square Footage of ASPHALT Streets} </b> </td>
+								<td style="font-size: 30px; color:#1daeec"> <b> {{city_total_sq_footage_streets}} </b> </td>
+								<td style="font-size: 30px; color:#1daeec"> <b> {{city_total_sq_footage_concrete_streets}} </b> </td>
+								<td style="font-size: 30px; color:#1daeec"> <b> {{city_total_sq_footage_asphalt_streets}} </b> </td>
 							  </tr>
 							  <tr>
 								<td> Total Square Footage of All Streets </td>
@@ -98,9 +98,9 @@
                                   <td style="background-color: #201D40"></td>
 							  </tr>
                                 <tr>
-								<td style="font-size: 30px; color:#1daeec; "> <b> {CITY EXPECTED ANNUAL COST} </b></td>
-                                    <td style="font-size: 30px; color:#1daeec;"> <b> {CITY ACTUAL ANNUAL SPENDING}</b> </td>
-								<td style="font-size: 30px; color:red"> <b> {CITY COST DIFFERENTIAL} </b> </td
+								<td style="font-size: 30px; color:#1daeec; "> <b> {{city_roads_expected_annual_cost}} </b></td>
+                                    <td style="font-size: 30px; color:#1daeec;"> <b> {{city_roads_actual_annual_spending}}</b> </td>
+								<td style="font-size: 30px; color:red"> <b> {{city_roads_cost_differential}} </b> </td
 
 							  </tr>
 							  <tr>
