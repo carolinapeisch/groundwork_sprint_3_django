@@ -39,8 +39,6 @@ class CityOverview(View):
         response_data = city_df.loc[city_df['city_name']==city_name].to_dict(orient='records')[0]
         return render(request, self.template_name, response_data)
 
-
-
 class CityRoads(View):
     template_name = "city_roads_drilldown.html"
 
