@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from .forms import NameForm
 import pandas as pd
+import numpy as np
 import os
 
 class HomePageView(View):
@@ -18,7 +19,7 @@ class HomePageView(View):
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['city_input'].lower().title()
+            name = form.cleaned_data['city_input'].upper()
             return HttpResponseRedirect('/city_overview/{}'.format(name))
         return render(request, self.template_name, {'form': form})
 
@@ -33,8 +34,9 @@ class CityOverview(View):
     template_name = "city_overview.html"
 
     def get(self, request, **kwargs):
-        fname = os.path.join(os.path.dirname(__file__), 'dummy_csv.csv')
-        city_df = pd.read_csv(fname,header=0)
+        fname = os.path.join(os.path.dirname(__file__), 'noopur_real_data.csv')
+        number_types = {'overall_city_health_score':np.int32, 'airport_score':np.int32, 'building_score': np.int32, 'road_score':np.int32, 'sewage_score':np.int32}
+        city_df = pd.read_csv(fname,header=0, dtype = number_types)
         city_name = kwargs.get('city_name')
         response_data = city_df.loc[city_df['city_name']==city_name].to_dict(orient='records')[0]
         return render(request, self.template_name, response_data)
@@ -43,7 +45,7 @@ class CityRoads(View):
     template_name = "city_roads_drilldown.html"
 
     def get(self, request, **kwargs):
-        fname = os.path.join(os.path.dirname(__file__), 'dummy_csv.csv')
+        fname = os.path.join(os.path.dirname(__file__), 'noopur_real_data.csv')
         city_df = pd.read_csv(fname,header=0)
         city_name = kwargs.get('city_name')
         response_data = city_df.loc[city_df['city_name']==city_name].to_dict(orient='records')[0]

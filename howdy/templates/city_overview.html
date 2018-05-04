@@ -57,24 +57,25 @@
 					<div id="main">
 						<div class="inner">
                             <div id = "content">
-							<h1>{{city_name}}</h1>
+                                <h1 style="margin-bottom:10px;"> {{city_name}}</h1>
+							<!--<h1>{{city_name}}</h1>-->
 								<table style="width:100%; table-layout:fixed">
 									<tr>
-										<td style="font-size: 20px; color:#A9A9A9">
-											{{city_population}}
+										<td style="font-size: 15px; color:#A9A9A9">
+                                            Total Population:  {{city_population}}
 										</td>
-										<td style="font-size: 20px; color:#A9A9A9">
-											{{city_median_household_income}}
-										</td>
-									</tr>
-									<tr>
-										<td style="color:#A9A9A9">
-											Total Population
-										</td>
-										<td style="color:#A9A9A9">
-											Median Household Income
+										<td style="font-size: 15px; color:#A9A9A9">
+                                            Median Household Income: {{city_median_household_income}}
 										</td>
 									</tr>
+									<!--<tr>-->
+										<!--<td style="color:#A9A9A9">-->
+											<!--Total Population-->
+										<!--</td>-->
+										<!--<td style="color:#A9A9A9">-->
+											<!--Median Household Income-->
+										<!--</td>-->
+									<!--</tr>-->
 
 								</table>
 
@@ -86,8 +87,8 @@
 								<tr>
 									<td>
 										<div class="center-div">
-										<div class="c100 p{{city_health_score}} small">
-									<span>{{city_health_score}}</span>
+										<div class="c100 p{{overall_city_health_score}} small">
+									<span>{{overall_city_health_score}}</span>
 									<div class="slice">
 										<div class="bar"></div>
 										<div class="fill"></div>
@@ -110,8 +111,8 @@
 							<table style="width:100%; background-color: white" >
 							  <tr>
 								<th style="font-size: 30px; color:red"> {{city_status}} </td>
-								<th style="font-size: 30px; color:red"> {{city_expected_funding}} </td>
-								<th style="font-size: 30px; color:red"> {{city_status_current_funding}} </td>
+								<th style="font-size: 30px; color:red"> ${{city_expected_funding}} </td>
+								<th style="font-size: 30px; color:red"> ${{city_status_current_funding}} </td>
 							  </tr>
                                 <tr>
 								<td>Overall City Status</td>
