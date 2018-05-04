@@ -58,6 +58,28 @@
 						<div class="inner">
                             <div id = "content">
 							<h1>{{city_name}}</h1>
+								<table style="width:100%; table-layout:fixed">
+									<tr>
+										<td style="font-size: 20px; color:#A9A9A9">
+											{{city_population}}
+										</td>
+										<td style="font-size: 20px; color:#A9A9A9">
+											{{city_median_household_income}}
+										</td>
+									</tr>
+									<tr>
+										<td style="color:#A9A9A9">
+											Total Population
+										</td>
+										<td style="color:#A9A9A9">
+											Median Household Income
+										</td>
+									</tr>
+
+								</table>
+
+
+
                                 <h3> Groundwork Health Score</h3>
 
 								<table style="width:100%; background-color: white" >
@@ -76,12 +98,12 @@
 							  </tr>
                                 <tr>
 									<td>
-										<a href="http://www.springfield-ma.gov/finance/index.php?id=omb">View {{city_name}} 2017 Budget</a>
+										<a {{city_cafr_link}}>View {{city_name}} 2017 Budget</a>
 									</td>
 							  </tr>
 								<tr>
 									<td>
-										<a href="http://www.springfield-ma.gov/finance/index.php?id=omb">View {{city_name}} 2017 Budget</a>
+										<a {{city_cafr_link}}>View {{city_name}} 2017 Budget</a>
 									</td>
 								</tr>
 							</table>
