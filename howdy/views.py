@@ -19,7 +19,7 @@ class HomePageView(View):
     def post(self, request, *args, **kwargs):
         form = self.form_class(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['city_input'].upper()
+            name = form.cleaned_data['city_input'].title()
             return HttpResponseRedirect('/city_overview/{}'.format(name))
         return render(request, self.template_name, {'form': form})
 
